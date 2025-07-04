@@ -4,6 +4,7 @@
 import LandingPageMastery from '@/components/LandingPageMastery';
 
 const LandingPage = () => {
+  // Force deployment refresh
   return <LandingPageMastery />;
 };
 
