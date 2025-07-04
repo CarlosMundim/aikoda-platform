@@ -1,0 +1,292 @@
+/* SalesDeel Hybrid Design System */
+
+:root {
+  /* Salesforce Enterprise Colors */
+  --sf-primary: #032D60;
+  --sf-accent: rgb(249, 240, 255);
+  
+  /* Deel Modern Colors */
+  --deel-black: #1B1B1B;
+  --deel-blue: #B1D8FC;
+  --deel-yellow: #FFFBF4;
+  --deel-gray: rgba(27, 27, 27, 0.70);
+  
+  /* aiKODA Brand Colors */
+  --aikoda-primary: #032D60;
+  --aikoda-secondary: #1B1B1B;
+  --aikoda-accent: #B1D8FC;
+  --aikoda-success: #22c55e;
+  
+  /* Typography Scale (Deel Standards) */
+  --font-headline-xl: 56px;
+  --font-headline-lg: 48px;
+  --font-headline-md: 40px;
+  --font-headline-sm: 32px;
+  --font-body-xl: 20px;
+  --font-body-lg: 18px;
+  --font-body-md: 16px;
+  --font-body-sm: 14px;
+  
+  /* Line Heights */
+  --line-tight: 1.05;
+  --line-normal: 1.4;
+  --line-relaxed: 1.6;
+  
+  /* Spacing System */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 80px;
+  --space-4xl: 120px;
+  
+  /* Container */
+  --container-max: 1312px;
+  
+  /* Border Radius (Deel Signature) */
+  --radius-button: 200px;
+  --radius-card: 24px;
+  --radius-small: 16px;
+}
+
+/* Deel-style Button System */
+.btn-primary,
+.btn-secondary {
+  padding: 16px 40px;
+  border-radius: var(--radius-button);
+  font-size: var(--font-body-lg);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--aikoda-success);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--aikoda-primary);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Card System (Hybrid Approach) */
+.card {
+  background: white;
+  border-radius: var(--radius-card);
+  padding: var(--space-2xl);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Typography Classes */
+.text-headline-xl {
+  font-size: var(--font-headline-xl);
+  line-height: var(--line-tight);
+  font-weight: 700;
+}
+
+.text-headline-lg {
+  font-size: var(--font-headline-lg);
+  line-height: var(--line-tight);
+  font-weight: 700;
+}
+
+.text-headline-md {
+  font-size: var(--font-headline-md);
+  line-height: var(--line-tight);
+  font-weight: 600;
+}
+
+.text-body-lg {
+  font-size: var(--font-body-lg);
+  line-height: var(--line-relaxed);
+}
+
+/* Animations (Deel Smoothness) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Staggered Animations */
+.animate-stagger-1 { animation-delay: 0.1s; }
+.animate-stagger-2 { animation-delay: 0.2s; }
+.animate-stagger-3 { animation-delay: 0.3s; }
+.animate-stagger-4 { animation-delay: 0.4s; }
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  :root {
+    --font-headline-xl: 40px;
+    --font-headline-lg: 32px;
+    --font-headline-md: 28px;
+    --font-headline-sm: 24px;
+    --space-2xl: 32px;
+    --space-3xl: 48px;
+    --space-4xl: 80px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 14px 32px;
+    font-size: var(--font-body-md);
+  }
+}
+
+/* Glassmorphism Effects */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient Utilities */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--aikoda-primary) 0%, var(--aikoda-secondary) 100%);
+}
+
+.gradient-success {
+  background: linear-gradient(135deg, var(--aikoda-success) 0%, #16a34a 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--deel-blue) 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section Spacing */
+.section {
+  padding: var(--space-4xl) 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-2xl);
+  }
+}
+
+/* Grid System */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+/* Navigation Styles (Salesforce Inspired) */
+.nav-mega-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Hero Pattern Background */
+.pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B1D8FC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States (Accessibility) */
+button:focus,
+a:focus {
+  outline: 3px solid var(--aikoda-accent);
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  color: transparent;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}

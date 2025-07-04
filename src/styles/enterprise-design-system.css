@@ -1,0 +1,392 @@
+/* 
+ * aiKODA Enterprise Design System
+ * Context Engineering Implementation
+ * Following Carlos's exact specifications for enterprise elegance
+ */
+
+/* =================================
+   TYPOGRAPHY - CONTEXT ENGINEERED
+   ================================= */
+
+:root {
+  /* Typography Scale - Precise Control */
+  --headline-desktop: clamp(32px, 4vw, 48px);  /* 48-52px max per specs */
+  --headline-mobile: 32px;
+  --subheading: clamp(20px, 2.5vw, 24px);     /* 20-24px per specs */
+  --body-large: 18px;                          /* 16-18px readable */
+  --body-regular: 16px;
+  --body-small: 14px;
+  --caption: 12px;
+  
+  /* Font Weights - Enterprise Standards */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  
+  /* Line Heights - Optimized Readability */
+  --line-tight: 1.2;     /* Headlines */
+  --line-normal: 1.5;    /* Body text */
+  --line-relaxed: 1.6;   /* Subtitles */
+  
+  /* Letter Spacing - Professional */
+  --letter-tight: -0.02em;   /* Large headlines */
+  --letter-normal: 0;        /* Body text */
+  --letter-wide: 0.025em;    /* Small text/captions */
+}
+
+/* =================================
+   COLOR PALETTE - ZEN ELEGANCE
+   ================================= */
+
+:root {
+  /* Background Colors - Mostly White/Light Gray */
+  --bg-primary: #FFFFFF;
+  --bg-light: #F9FAFB;      /* Very light grey for sections */
+  --bg-lighter: #F5F7FA;    /* Alternative light background */
+  
+  /* Text Colors - Soft, Not Harsh */
+  --text-primary: #2D2D2D;     /* Dark grey, less harsh than black */
+  --text-secondary: #666666;   /* Medium grey for secondary text */
+  --text-tertiary: #757575;    /* Lighter grey for captions */
+  
+  /* Brand Colors - Soft Blues */
+  --blue-primary: #3B82F6;     /* Primary blue for buttons, links */
+  --blue-secondary: #2563EB;   /* Slightly deeper blue */
+  --blue-light: #60A5FA;      /* Light blue for accents */
+  
+  /* Success/Metrics - Green */
+  --green-primary: #22C55E;    /* Growth, savings, positive metrics */
+  --green-secondary: #16A34A;  /* Deeper green for emphasis */
+  
+  /* Neutral Grays - Subtle Borders */
+  --gray-border: #E5E7EB;      /* Light grey for borders, dividers */
+  --gray-subtle: #F3F4F6;      /* Very subtle backgrounds */
+  --gray-medium: #9CA3AF;      /* Medium grey for less important text */
+}
+
+/* =================================
+   SPACING SYSTEM - GENEROUS
+   ================================= */
+
+:root {
+  /* Vertical Spacing - Context Engineering */
+  --hero-padding-top: 140px;      /* Hero top padding minimum */
+  --section-padding: 120px;       /* Section top/bottom padding */
+  --section-padding-medium: 80px; /* Medium sections */
+  --content-padding: 48px;        /* Desktop horizontal padding */
+  --content-padding-mobile: 24px; /* Mobile horizontal padding */
+  
+  /* Component Spacing */
+  --grid-gap-large: 60px;         /* Between major grid items */
+  --grid-gap-medium: 40px;        /* Between cards */
+  --grid-gap-small: 24px;         /* Between smaller elements */
+  
+  /* Content Width */
+  --content-max-width: 1140px;    /* Max content width for readability */
+  --content-max-width-wide: 1280px; /* Wide content areas */
+  --text-max-width: 700px;        /* Max width for text blocks */
+}
+
+/* =================================
+   COMPONENT STYLES - ENTERPRISE
+   ================================= */
+
+/* Headlines - Context Engineered */
+.enterprise-headline {
+  font-size: var(--headline-desktop);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-tight);
+  letter-spacing: var(--letter-tight);
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.enterprise-subheading {
+  font-size: var(--subheading);
+  font-weight: var(--weight-medium);
+  line-height: var(--line-relaxed);
+  color: var(--text-secondary);
+  max-width: var(--text-max-width);
+  margin: 0 auto 2rem auto;
+}
+
+/* Body Text - Readable */
+.enterprise-body {
+  font-size: var(--body-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-normal);
+  color: var(--text-secondary);
+}
+
+.enterprise-body-large {
+  font-size: var(--body-large);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-normal);
+  color: var(--text-secondary);
+}
+
+/* Buttons - Subtle Elegance */
+.enterprise-btn-primary {
+  background-color: var(--blue-primary);
+  color: var(--bg-primary);
+  font-size: var(--body-regular);
+  font-weight: var(--weight-semibold);
+  padding: 20px 48px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+}
+
+.enterprise-btn-primary:hover {
+  background-color: var(--blue-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.15);
+}
+
+.enterprise-btn-secondary {
+  background-color: var(--bg-primary);
+  color: var(--blue-primary);
+  font-size: var(--body-regular);
+  font-weight: var(--weight-semibold);
+  padding: 18px 46px;
+  border: 2px solid var(--blue-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.enterprise-btn-secondary:hover {
+  background-color: var(--blue-primary);
+  color: var(--bg-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.15);
+}
+
+/* Stats & Counters - Green Metrics */
+.enterprise-stat-number {
+  font-size: clamp(32px, 4vw, 40px);
+  font-weight: var(--weight-bold);
+  color: var(--green-primary);
+  line-height: var(--line-tight);
+  margin-bottom: 0.5rem;
+}
+
+.enterprise-stat-label {
+  font-size: var(--body-regular);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Cards - Clean & Professional */
+.enterprise-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--gray-border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.enterprise-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.enterprise-card-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--blue-primary);
+  margin-bottom: 1rem;
+}
+
+.enterprise-card-title {
+  font-size: 20px;
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: var(--line-tight);
+}
+
+.enterprise-card-description {
+  font-size: var(--body-regular);
+  font-weight: var(--weight-regular);
+  color: var(--text-secondary);
+  line-height: var(--line-normal);
+  margin-bottom: 1rem;
+}
+
+/* Icons - Solid Fill, Enterprise */
+.enterprise-icon-primary {
+  color: var(--blue-primary);
+}
+
+.enterprise-icon-secondary {
+  color: var(--text-secondary);
+}
+
+.enterprise-icon-success {
+  color: var(--green-primary);
+}
+
+/* Layout Containers */
+.enterprise-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-left: var(--content-padding);
+  padding-right: var(--content-padding);
+}
+
+.enterprise-container-wide {
+  max-width: var(--content-max-width-wide);
+  margin: 0 auto;
+  padding-left: var(--content-padding);
+  padding-right: var(--content-padding);
+}
+
+.enterprise-section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.enterprise-section-medium {
+  padding-top: var(--section-padding-medium);
+  padding-bottom: var(--section-padding-medium);
+}
+
+/* Grid Systems - Balanced */
+.enterprise-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--grid-gap-medium);
+}
+
+.enterprise-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--grid-gap-medium);
+}
+
+.enterprise-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--grid-gap-large);
+}
+
+/* =================================
+   RESPONSIVE - MOBILE OPTIMIZATION
+   ================================= */
+
+@media (max-width: 768px) {
+  :root {
+    --content-padding: var(--content-padding-mobile);
+    --hero-padding-top: 96px;
+    --section-padding: 64px;
+    --grid-gap-large: 32px;
+    --grid-gap-medium: 24px;
+  }
+  
+  .enterprise-btn-primary,
+  .enterprise-btn-secondary {
+    padding: 16px 32px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .enterprise-grid-4,
+  .enterprise-grid-3,
+  .enterprise-grid-2 {
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap-medium);
+  }
+  
+  .enterprise-stat-number {
+    font-size: 28px;
+  }
+}
+
+/* =================================
+   ACCESSIBILITY & CONTRAST
+   ================================= */
+
+/* Ensure 4.5:1 contrast ratio minimum */
+.enterprise-text-contrast {
+  color: var(--text-primary);
+}
+
+/* Focus states for accessibility */
+.enterprise-focus:focus {
+  outline: 2px solid var(--blue-primary);
+  outline-offset: 2px;
+}
+
+/* Selection colors */
+::selection {
+  background-color: var(--blue-light);
+  color: var(--bg-primary);
+}
+
+/* =================================
+   ANIMATIONS - SUBTLE ELEGANCE
+   ================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.enterprise-animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.enterprise-animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.enterprise-animate-slideUp {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins on common elements */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* Enterprise-grade smooth transitions */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}

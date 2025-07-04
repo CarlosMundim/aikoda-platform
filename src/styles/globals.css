@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Enterprise Design System */
+@import './enterprise-design-system.css';
+
+/* =================================
+   GLOBAL STYLES - PIXEL PERFECT
+   ================================= */
+
+:root {
+  /* Design System Variables - All in Pixels */
+  
+  /* Font Sizes */
+  --font-h1-mobile: 48px;
+  --font-h1-desktop: 72px;
+  --font-h2-mobile: 36px;
+  --font-h2-desktop: 48px;
+  --font-h3-mobile: 28px;
+  --font-h3-desktop: 36px;
+  --font-h4-mobile: 24px;
+  --font-h4-desktop: 28px;
+  --font-body-large: 24px;
+  --font-body-regular: 18px;
+  --font-body-small: 16px;
+  --font-caption: 14px;
+  
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  
+  /* Line Heights */
+  --line-tight: 1.1;
+  --line-normal: 1.5;
+  --line-relaxed: 1.75;
+  
+  /* Letter Spacing */
+  --letter-tight: -0.02em;
+  --letter-normal: 0;
+  --letter-wide: 0.025em;
+  
+  /* Colors */
+  --color-primary: #3b82f6;
+  --color-secondary: #06b6d4;
+  --color-accent: #22d3ee;
+  --color-success: #22c55e;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  /* Spacing Scale */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-128: 128px;
+  --space-160: 160px;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: var(--font-body-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-normal);
+  color: #111827;
+  background-color: #ffffff;
+}
+
+/* Typography Classes with Exact Pixel Control */
+.text-h1 {
+  font-size: var(--font-h1-mobile);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-tight);
+  letter-spacing: var(--letter-tight);
+}
+
+.text-h2 {
+  font-size: var(--font-h2-mobile);
+  font-weight: var(--weight-bold);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.text-h3 {
+  font-size: var(--font-h3-mobile);
+  font-weight: var(--weight-semibold);
+  line-height: 1.3;
+  letter-spacing: var(--letter-normal);
+}
+
+.text-body-large {
+  font-size: var(--font-body-large);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-normal);
+  letter-spacing: var(--letter-normal);
+}
+
+.text-body-regular {
+  font-size: var(--font-body-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-normal);
+  letter-spacing: var(--letter-normal);
+}
+
+.text-body-small {
+  font-size: var(--font-body-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-normal);
+  letter-spacing: var(--letter-normal);
+}
+
+.text-caption {
+  font-size: var(--font-caption);
+  font-weight: var(--weight-regular);
+  line-height: 1.4;
+  letter-spacing: var(--letter-wide);
+}
+
+/* Desktop Responsive Typography */
+@media (min-width: 768px) {
+  .text-h1 {
+    font-size: var(--font-h1-desktop);
+  }
+  
+  .text-h2 {
+    font-size: var(--font-h2-desktop);
+  }
+  
+  .text-h3 {
+    font-size: var(--font-h3-desktop);
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Custom Component Classes */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-body-small);
+  font-weight: var(--weight-medium);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: var(--font-body-small);
+  font-weight: var(--weight-medium);
+  padding: 12px 24px;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero Background */
+.hero-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #0f172a 100%);
+}
+
+/* Utility Classes */
+.container-padding {
+  padding-left: var(--space-24);
+  padding-right: var(--space-24);
+}
+
+.section-padding {
+  padding-top: var(--space-80);
+  padding-bottom: var(--space-80);
+}
+
+.card-padding {
+  padding: var(--space-32);
+}
+
+/* Focus States */
+.focus-ring:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Colors */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
