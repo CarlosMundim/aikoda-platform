@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+
 import Link from 'next/link';
 import { 
   Mail, 
@@ -23,7 +23,7 @@ interface FooterProps {
 }
 
 const Footer = ({ variant = 'main', showLanguageSelector = true }: FooterProps) => {
-  const t = useTranslations();
+  
   const currentYear = new Date().getFullYear();
 
   const footerSections = [

@@ -133,7 +133,7 @@ export interface PartnerMetrics {
 export interface WebhookEvent {
   id: string;
   partnerId: string;
-  type: 'assessment.completed' | 'candidate.qualified' | 'hiring.successful' | 'agent.alert' | 'system.maintenance';
+  type: 'assessment.completed' | 'candidate.qualified' | 'hiring.successful' | 'agent.alert' | 'system.maintenance' | 'partner.initialized' | 'assessment.created';
   data: any;
   timestamp: Date;
   signature: string;
@@ -333,7 +333,7 @@ export class PartnerAPIFramework {
         error: {
           code: 'ASSESSMENT_CREATION_FAILED',
           message: 'Failed to create assessment',
-          details: error.message
+          details: error instanceof Error ? error.message : String(error)
         }
       };
     }
@@ -386,7 +386,7 @@ export class PartnerAPIFramework {
         error: {
           code: 'ASSESSMENT_PROCESSING_FAILED',
           message: 'Failed to process assessment',
-          details: error.message
+          details: error instanceof Error ? error.message : String(error)
         }
       };
     }

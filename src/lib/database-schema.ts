@@ -134,7 +134,7 @@ export interface CulturalAssessment {
   }>;
   results: {
     cultural_profile: CulturalProfile;
-    match_results: CulturalMatchResult[];
+    match_results: any[];
     ai_insights: string[];
     recommendations: string[];
     integration_plan: string[];

@@ -1,11 +1,9 @@
 'use client';
 
-// Import our Mastery version - applying all learned design principles
-import LandingPageMastery from '@/components/LandingPageMastery';
+import LandingPageEnterprise from '@/components/LandingPageEnterprise';
 
 const LandingPage = () => {
-  // Force deployment refresh
-  return <LandingPageMastery />;
+  return <LandingPageEnterprise />;
 };
 
 export default LandingPage;

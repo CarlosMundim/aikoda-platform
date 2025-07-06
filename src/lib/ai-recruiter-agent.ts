@@ -220,6 +220,7 @@ export class AIRecruiterAgent {
       if (!this.isActive) break;
       
       try {
+        // @ts-ignore
         await action.call(this);
       } catch (error) {
         console.error(`Action failed for agent ${this.config.name}:`, error);

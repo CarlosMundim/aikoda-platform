@@ -313,6 +313,10 @@ export class AuthSystem {
     const user = await this.getUserById(apiKey.userId);
     const organization = await this.getOrganizationContext(apiKey.organizationId);
 
+    if (!user) {
+      throw new Error('User not found');
+    }
+
     return { apiKey, user, organization };
   }
 
@@ -523,7 +527,7 @@ export class AuthSystem {
       exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60) // 24 hours
     };
 
-    return await new SignJWT(payload)
+    return await new SignJWT(payload as any)
       .setProtectedHeader({ alg: 'HS256' })
       .setIssuedAt()
       .setExpirationTime('24h')

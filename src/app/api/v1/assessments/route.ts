@@ -205,7 +205,7 @@ export async function PUT(request: NextRequest) {
           adaptabilityScore: culturalProfile.adaptabilityScore,
           processingTime,
           keyStrengths: culturalProfile.strengths.slice(0, 3),
-          developmentAreas: culturalProfile.developmentAreas.slice(0, 3),
+          developmentAreas: culturalProfile.riskFactors.slice(0, 3),
           integrationTimeline: matchResults.timelineEstimate
         }
       }
@@ -339,7 +339,7 @@ function calculateEstimatedTime(questionCount: number, assessmentType: string): 
 
 function getTargetCultureProfile(culture: string): Record<string, number> {
   // This would be loaded from a database of cultural profiles
-  const cultureProfiles = {
+  const cultureProfiles: Record<string, Record<string, number>> = {
     'Japanese Business Culture': {
       'direct_indirect': 25, // More indirect
       'formal_informal': 80, // More formal

@@ -126,14 +126,14 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A1628] via-[#1E293B] to-[#0F172A]">
       {/* Palace-level Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B1D8FC' fill-opacity='0.3'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 0h40v2L40 2V0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }} />
         </div>
 
-        <div className="relative max-w-[1312px] mx-auto px-12 py-32">
+        <div className="relative max-w-[1312px] mx-auto px-12 py-48">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -167,7 +167,7 @@ const AboutPage = () => {
       </section>
 
       {/* Company Stats */}
-      <section className="py-32 bg-gradient-to-r from-[#0A1628] to-[#1E293B]">
+      <section className="py-48 bg-gradient-to-r from-[#0A1628] to-[#1E293B]">
         <div className="max-w-[1312px] mx-auto px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -191,7 +191,7 @@ const AboutPage = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-32">
+      <section className="py-48">
         <div className="max-w-[1312px] mx-auto px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -267,7 +267,7 @@ const AboutPage = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-32 bg-gradient-to-r from-[#0A1628] to-[#1E293B]">
+      <section className="py-48 bg-gradient-to-r from-[#0A1628] to-[#1E293B]">
         <div className="max-w-[1312px] mx-auto px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -327,7 +327,7 @@ const AboutPage = () => {
       </section>
 
       {/* Team */}
-      <section className="py-32">
+      <section className="py-48">
         <div className="max-w-[1312px] mx-auto px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -382,7 +382,7 @@ const AboutPage = () => {
       </section>
 
       {/* Values */}
-      <section className="py-32 bg-gradient-to-r from-[#0A1628] to-[#1E293B]">
+      <section className="py-48 bg-gradient-to-r from-[#0A1628] to-[#1E293B]">
         <div className="max-w-[1312px] mx-auto px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -427,7 +427,7 @@ const AboutPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-32">
+      <section className="py-48">
         <div className="max-w-[1312px] mx-auto px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
