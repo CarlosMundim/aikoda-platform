@@ -6,10 +6,13 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { label: 'Platform', href: '#platform' },
-  { label: 'Intelligence', href: '#intelligence' },
-  { label: 'Results', href: '#results' },
-  { label: 'Enterprise', href: '#enterprise' },
+  { label: 'Platform', href: '/platform' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Intelligence', href: '/intelligence' },
+  { label: 'Results', href: '/results' },
+  { label: 'Enterprise', href: '/enterprise' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const Header = () => {
@@ -35,7 +38,7 @@ const Header = () => {
       className="fixed top-0 left-0 w-full z-50"
     >
       <nav
-        className="max-w-[1312px] mx-auto flex items-center justify-between px-6 md:px-12 py-4 md:py-5"
+        className="max-w-[1312px] mx-auto flex items-center justify-between px-6 md:px-12 py-6 md:py-7"
         aria-label="Primary Navigation"
       >
         {/* Logo */}
@@ -48,13 +51,13 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.25 }}
-                className="w-28 h-auto relative"
+                className="w-auto h-auto relative"
               >
                 <Image
-                  src="/logos/aikoda_blue_logo.svg"
-                  alt="aiKODA blue logo"
-                  width={112}
-                  height={36}
+                  src="/logos/ai_koda_dev_blue.webp"
+                  alt="aiKODA.dev blue logo"
+                  width={177}
+                  height={57}
                   priority
                 />
               </motion.div>
@@ -65,13 +68,13 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
-                className="w-28 h-auto relative"
+                className="w-auto h-auto relative"
               >
                 <Image
-                  src="/logos/aikoda_white_logo.svg"
-                  alt="aiKODA white logo"
-                  width={112}
-                  height={36}
+                  src="/logos/ai_koda_dev_white.webp"
+                  alt="aiKODA.dev white logo"
+                  width={177}
+                  height={57}
                   priority
                 />
               </motion.div>
@@ -80,12 +83,12 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-10 font-medium text-gray-700 dark:text-gray-100">
+        <ul className="hidden md:flex space-x-10 font-normal text-sm text-gray-700 dark:text-gray-100">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                className={`relative text-lg transition-colors duration-200 hover:text-[#22c55e] focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2 ${
+                className={`relative text-sm font-normal transition-colors duration-200 hover:text-[#22c55e] focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2 ${
                   scrolled ? 'text-gray-700' : 'text-white'
                 }`}
               >
@@ -103,24 +106,21 @@ const Header = () => {
         {/* CTAs */}
         <div className="hidden md:flex items-center space-x-6">
           <button
-            className={`px-6 py-2 rounded-full font-semibold transition-colors duration-300 ${
+            className={`px-6 py-2 rounded-lg font-semibold transition-colors duration-300 flex items-center gap-2 ${
               scrolled
-                ? 'bg-[#22c55e] text-white hover:bg-[#16a34a]'
-                : 'bg-[#22c55e] text-white hover:bg-[#16a34a]'
+                ? 'bg-[#032D60] text-white hover:bg-[#22c55e] hover:text-[#032D60]'
+                : 'bg-[#22c55e] text-white hover:bg-white hover:text-[#032D60]'
             }`}
-            aria-label="Start Cultural Assessment"
+            aria-label="Live Demo"
           >
-            Start Cultural Assessment
-          </button>
-          <button
-            className={`px-6 py-2 rounded-full font-semibold border-2 border-white transition-colors duration-300 ${
-              scrolled
-                ? 'text-[#032D60] border-[#032D60] hover:bg-[#032D60] hover:text-white'
-                : 'text-white border-white hover:bg-white hover:text-[#032D60]'
-            }`}
-            aria-label="Schedule Demo"
-          >
-            Schedule Demo
+            <Image
+              src="/logos/fav_blue_32x32.ico"
+              alt="aiKODA icon"
+              width={20}
+              height={20}
+              className="inline-block"
+            />
+            Live Demo
           </button>
         </div>
 

@@ -207,6 +207,22 @@ body {
   }
 }
 
+@keyframes elegantFlow {
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  33% { 
+    background-position: 100% 30%; 
+  }
+  66% { 
+    background-position: 50% 100%; 
+  }
+}
+
+.animate-gradient {
+  animation: elegantFlow 12s ease-in-out infinite;
+}
+
 /* Custom Component Classes */
 .btn-primary {
   background-color: var(--color-primary);

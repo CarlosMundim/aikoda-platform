@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { culturalAI } from '@/lib/deepseek';
 
+// Force dynamic rendering for this API route
+export const dynamic = 'force-dynamic';
+
 // aiKODA's Cultural Intelligence "Sparkpage" - Comprehensive Cultural Analysis Report
 // Inspired by Genspark's approach but specialized for cultural intelligence
 

@@ -26,11 +26,13 @@ const LandingPageEnterprise: React.FC = () => {
       {/* ---------- HEADER ---------- */}
       <Header />
 
-      {/* ---------- TIGER PhD HERO SECTION - LUXURY BLUE GRADIENT ---------- */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-blue-950 to-blue-900">
-        {/* Subtle animation overlay for luxury feel */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-blue-800/20 to-transparent animate-pulse" style={{ animationDuration: '4s' }} />
+      {/* ---------- TIGER PhD HERO SECTION - GRID SYSTEM & CORPORATE ELEGANCE ---------- */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Enterprise geometric pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M0 0h80v80H0V0zm40 40h40v40H40V40zM0 40h40v40H0V40z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
         </div>
 
         {/* Tiger PhD Grid System Canvas */}
@@ -39,44 +41,44 @@ const LandingPageEnterprise: React.FC = () => {
             {/* -------- HERO CONTENT - CENTERED ENTERPRISE GRID -------- */}
             <div className="col-span-12 lg:col-span-10 lg:col-start-2 text-center">
               <motion.h1
-                className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-12 font-light tracking-tight leading-[0.85] whitespace-nowrap"
+                className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-24 font-light tracking-tight leading-[0.85]"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
               >
-                <span className="text-white">we SOLVE what OTHERS CAN'T</span>
+                <span className="text-white">We Solve What<br />Others Can't</span>
               </motion.h1>
               
               <motion.div 
-                className="mb-24 max-w-5xl mx-auto"
+                className="mb-32 max-w-5xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.3 }}
               >
-                <p className="text-2xl md:text-3xl text-white/90 font-light leading-relaxed tracking-wide mb-2">
-                  Where Top Talent and Japanese Excellence Meet
+                <p className="text-2xl md:text-3xl lg:text-4xl text-slate-300 font-light leading-relaxed tracking-wide mb-12">
+                  Where Top Talent and Japanese Excellence Meet — <span className="text-emerald-400 font-medium">Powered by Advanced AI</span>
                 </p>
-                <p className="text-2xl md:text-3xl text-emerald-400 font-light leading-relaxed tracking-wide">
-                  POWERED BY ADVANCED AI & NHI TECHNOLOGIES
+                <p className="text-xl md:text-2xl text-slate-400 font-light leading-relaxed tracking-wide">
+                  The first AI platform built specifically for Japanese business culture. Complete ecosystem for precision hiring, onboarding, and workforce support — now scaling globally.
                 </p>
               </motion.div>
 
-              {/* Enterprise CTA Grid - 3x More spacing, 30% less height */}
+              {/* Enterprise CTA Grid */}
               <motion.div 
-                className="flex flex-col md:flex-row gap-36 justify-center items-center"
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.6 }}
               >
                 <a
                   href="/demo/assessment"
-                  className="group relative px-12 py-3 bg-emerald-500 text-white font-normal text-lg rounded-lg hover:bg-emerald-600 transition-all duration-700 inline-flex items-center justify-center shadow-xl hover:shadow-2xl"
+                  className="group relative px-12 py-6 bg-white text-slate-900 font-semibold text-lg rounded-none hover:bg-slate-50 transition-all duration-700 inline-flex items-center justify-center shadow-xl hover:shadow-2xl border-l-4 border-emerald-500"
                 >
                   <span className="relative z-10 tracking-wide">See How We Work</span>
                 </a>
                 <a
                   href="/contact"
-                  className="group px-12 py-3 border-2 border-white/60 text-white font-normal text-lg rounded-lg hover:border-white hover:bg-white/10 backdrop-blur-sm transition-all duration-700 inline-flex items-center justify-center"
+                  className="group px-12 py-6 border-2 border-white/20 text-white font-semibold text-lg rounded-none hover:border-white/40 hover:bg-white/5 backdrop-blur-sm transition-all duration-700 inline-flex items-center justify-center"
                 >
                   <span className="tracking-wide">Schedule Conversation</span>
                 </a>
@@ -421,7 +423,7 @@ const LandingPageEnterprise: React.FC = () => {
       <section className="py-48 lg:py-64 bg-white">
         <div className="max-w-[1400px] mx-auto px-24 lg:px-32">
           {/* Tiger PhD Header Template */}
-          <div className="text-center mb-48">
+          <div className="text-center mb-32">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-slate-900 mb-12 tracking-tight leading-[0.9]">
               Solutions for Every<br />
               <span className="text-slate-600">Workforce Challenge</span>
@@ -754,16 +756,12 @@ const LandingPageEnterprise: React.FC = () => {
             {/* Center - Visual */}
             <div className="lg:col-span-6">
               <div className="relative bg-white border border-slate-200 overflow-hidden">
-                <div className="aspect-video">
-                  <img 
-                    src="/images/sec_4_l.webp" 
-                    alt="aiKODA Enterprise Meeting Room"
-                    className="w-full h-full object-cover object-center"
-                  />
+                <div className="aspect-square bg-slate-100 flex items-center justify-center">
+                  <div className="text-6xl text-slate-400">📊</div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-                  <h3 className="text-white font-medium text-lg">aiKODA Enterprise Intelligence</h3>
-                  <p className="text-white/80 text-sm">Professional AI-powered workforce solutions</p>
+                  <h3 className="text-white font-medium text-lg">Enterprise AI Intelligence</h3>
+                  <p className="text-white/80 text-sm">Cultural data analytics visualization</p>
                 </div>
               </div>
             </div>
@@ -962,13 +960,13 @@ const LandingPageEnterprise: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
                 <a
                   href="/intelligence-platform"
-                  className="px-12 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-700 flex items-center justify-center space-x-3"
+                  className="px-12 py-6 bg-blue-600 text-white font-medium rounded-none hover:bg-blue-700 transition-all duration-700 flex items-center justify-center space-x-3 border-l-4 border-blue-800"
                 >
                   <span>Explore Intelligence Platform</span>
                 </a>
                 <a
                   href="/contact"
-                  className="px-12 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-700 flex items-center justify-center space-x-3"
+                  className="px-12 py-6 border-2 border-blue-600 text-blue-600 font-medium rounded-none hover:bg-blue-600 hover:text-white transition-all duration-700 flex items-center justify-center space-x-3"
                 >
                   <span>Request Intelligence Demo</span>
                 </a>

@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { culturalAI } from '@/lib/deepseek';
 
+// Force dynamic rendering for this API route
+export const dynamic = 'force-dynamic';
+
 // Sample demo data for Sankyo presentation
 const SANKYO_DEMO_DATA = {
   candidate: {
