@@ -1,0 +1,499 @@
+/* Premium Visual Design System for Japanese Executive Market */
+
+/* Advanced Color Palette - Japanese Corporate Elegance */
+:root {
+  /* Primary Corporate Colors */
+  --executive-navy: #1a2332;
+  --corporate-blue: #2563eb;
+  --premium-indigo: #4f46e5;
+  --accent-gold: #f59e0b;
+  
+  /* Japanese Inspired Neutrals */
+  --zen-white: #fefefe;
+  --pearl-gray: #f8fafc;
+  --stone-gray: #e5e7eb;
+  --charcoal: #374151;
+  --ink-black: #111827;
+  
+  /* Status & Success Colors */
+  --success-green: #10b981;
+  --warning-amber: #f59e0b;
+  --error-red: #ef4444;
+  --info-cyan: #06b6d4;
+  
+  /* Premium Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --gradient-premium: linear-gradient(135deg, #1a2332 0%, #2563eb 100%);
+  --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  
+  /* Advanced Shadows */
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-premium: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  
+  /* Typography Scale */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+  
+  /* Spacing System */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+/* Premium Dashboard Header */
+.premium-dashboard-header {
+  background: var(--gradient-premium);
+  padding: var(--space-12) 0;
+  border-radius: var(--radius-2xl);
+  margin-bottom: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-dashboard-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm10 0c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: 0.1;
+}
+
+.premium-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.premium-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin-top: var(--space-3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Executive Portal Cards */
+.executive-portal-card {
+  background: var(--zen-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-medium);
+  border: 1px solid var(--stone-gray);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.executive-portal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.executive-portal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-premium);
+  border-color: var(--corporate-blue);
+}
+
+.executive-portal-card:hover::before {
+  transform: scaleX(1);
+}
+
+.executive-portal-card.candidate::before {
+  background: var(--gradient-primary);
+}
+
+.executive-portal-card.client::before {
+  background: var(--gradient-success);
+}
+
+/* Premium Icons */
+.premium-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: var(--space-4);
+  background: var(--gradient-primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.premium-icon.client {
+  background: var(--gradient-success);
+}
+
+/* Executive Typography */
+.executive-card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--executive-navy);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.executive-card-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--charcoal);
+  margin-top: var(--space-2);
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Premium Tool Cards */
+.premium-tool-card {
+  background: var(--zen-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--stone-gray);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-tool-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--corporate-blue);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.premium-tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-large);
+  border-color: var(--corporate-blue);
+}
+
+.premium-tool-card:hover::after {
+  transform: scaleX(1);
+}
+
+.premium-tool-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: var(--space-3);
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 600;
+}
+
+.premium-tool-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--executive-navy);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.premium-tool-desc {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--charcoal);
+  margin-top: var(--space-2);
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* Section Headers */
+.premium-section-header {
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.premium-section-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--executive-navy);
+  margin: 0;
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+}
+
+.premium-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.premium-section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--charcoal);
+  margin-top: var(--space-3);
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Premium Grid Layouts */
+.premium-portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.premium-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+/* Japanese Professional Aesthetics */
+.zen-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.zen-spacing {
+  padding: var(--space-20) 0;
+}
+
+/* Premium Buttons */
+.premium-btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-lg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: 1rem;
+  line-height: 1.4;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-medium);
+}
+
+.premium-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-large);
+}
+
+.premium-btn-outline {
+  background: transparent;
+  color: var(--corporate-blue);
+  border: 2px solid var(--corporate-blue);
+}
+
+.premium-btn-outline:hover {
+  background: var(--corporate-blue);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Data Visualization Elements */
+.viz-card {
+  background: var(--zen-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-medium);
+  border: 1px solid var(--stone-gray);
+  margin-bottom: var(--space-6);
+}
+
+.viz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--stone-gray);
+}
+
+.viz-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--executive-navy);
+  margin: 0;
+}
+
+.viz-metric {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--corporate-blue);
+  margin: 0;
+}
+
+/* Progress Bars */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--stone-gray);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin: var(--space-3) 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-sm);
+  transition: width 0.8s ease;
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-green);
+}
+
+.status-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-amber);
+}
+
+.status-info {
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--info-cyan);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .premium-portal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .premium-tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .premium-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .zen-container {
+    padding: 0 2rem;
+  }
+  
+  .viz-card {
+    padding: 1.5rem;
+    margin: 0 -0.5rem;
+  }
+  
+  .premium-title {
+    font-size: 2rem;
+  }
+  
+  .premium-tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+  }
+  
+  .executive-portal-card,
+  .premium-tool-card {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-portal-grid,
+  .premium-tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .zen-spacing {
+    padding: var(--space-12) 0;
+  }
+}

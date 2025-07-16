@@ -1,0 +1,143 @@
+/* Client Registration Form Styles */
+
+.client-auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+  padding: var(--spacing-xl) 0;
+}
+
+.client-auth-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.client-auth-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  position: relative;
+}
+
+.client-auth-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-500), var(--primary-500));
+}
+
+.client-header {
+  padding: var(--spacing-2xl);
+  text-align: center;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.client-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-sm);
+}
+
+.client-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  font-weight: 400;
+}
+
+.client-body {
+  padding: var(--spacing-2xl);
+}
+
+.client-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .client-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.client-form-group {
+  margin-bottom: 0;
+}
+
+.client-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.client-submit-btn {
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.client-submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--transition-normal);
+}
+
+.client-submit-btn:hover::before {
+  left: 100%;
+}
+
+.client-submit-btn:hover {
+  background: linear-gradient(135deg, var(--secondary-600), var(--secondary-700));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .client-auth-content {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .client-body {
+    padding: var(--spacing-lg);
+  }
+  
+  .client-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .client-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-header {
+    padding: var(--spacing-lg);
+  }
+  
+  .client-body {
+    padding: var(--spacing-md);
+  }
+}
+

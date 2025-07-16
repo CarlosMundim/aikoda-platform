@@ -1,0 +1,242 @@
+/* Job Posting Management Styles */
+
+.job-posting-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 2rem 0;
+}
+
+.job-posting-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.job-posting-form {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.input-with-button {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.input-with-button .form-input {
+  flex: 1;
+}
+
+.generate-btn {
+  padding: 0.875rem 1rem;
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.generate-btn:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
+
+.skill-input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.add-btn {
+  padding: 0.875rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-btn:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.skill-tag.required {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.skill-tag.preferred {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.remove-skill {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.remove-skill:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.benefit-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.benefit-checkbox:hover {
+  border-color: var(--primary-color);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.benefit-checkbox input:checked + span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Status-based styling */
+.form-section[data-status="draft"] {
+  border-left: 4px solid #f59e0b;
+}
+
+.form-section[data-status="active"] {
+  border-left: 4px solid #10b981;
+}
+
+.form-section[data-status="paused"] {
+  border-left: 4px solid #ef4444;
+}
+
+.form-section[data-status="closed"] {
+  border-left: 4px solid #6b7280;
+}
+
+/* Enhanced form actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .job-posting-container {
+    padding: 1rem 0;
+  }
+  
+  .job-posting-header,
+  .job-posting-form {
+    padding: 0 1rem;
+  }
+  
+  .input-with-button {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .skill-input-container {
+    flex-direction: column;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Animation for skill tags */
+.skill-tag {
+  animation: slideInScale 0.3s ease-out;
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Enhanced focus states */
+.skill-input-container input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Validation states */
+.form-input.required:invalid {
+  border-color: #ef4444;
+}
+
+.form-input.required:valid {
+  border-color: #10b981;
+}
+

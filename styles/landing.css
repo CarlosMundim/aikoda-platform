@@ -1,0 +1,222 @@
+/* Control Dashboard Styles */
+
+.control-dashboard {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background: #f8fafc;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-subtitle {
+  font-size: 1.125rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.portal-section,
+.tools-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  line-height: 1.4;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7280;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.portal-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  color: #1f2937;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.portal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.portal-card.candidate {
+  border-color: #3b82f6;
+}
+
+.portal-card.candidate:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.portal-card.client {
+  border-color: #10b981;
+}
+
+.portal-card.client:hover {
+  background: #ecfdf5;
+  border-color: #059669;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+.tool-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #1f2937;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.card-icon {
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.tool-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+.tool-desc {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+/* Specific tool card colors */
+.tool-card.analytics:hover { border-color: #3b82f6; background: #eff6ff; }
+.tool-card.candidate-analytics:hover { border-color: #8b5cf6; background: #f3e8ff; }
+.tool-card.admin:hover { border-color: #ef4444; background: #fef2f2; }
+.tool-card.jobs:hover { border-color: #10b981; background: #ecfdf5; }
+.tool-card.pipeline:hover { border-color: #f59e0b; background: #fffbeb; }
+.tool-card.search:hover { border-color: #06b6d4; background: #ecfeff; }
+.tool-card.registration:hover { border-color: #ec4899; background: #fdf2f8; }
+.tool-card.profile:hover { border-color: #84cc16; background: #f7fee7; }
+.tool-card.client-profile:hover { border-color: #6366f1; background: #eef2ff; }
+.tool-card.skills:hover { border-color: #f97316; background: #fff7ed; }
+.tool-card.admin-users:hover { border-color: #64748b; background: #f8fafc; }
+.tool-card.config:hover { border-color: #374151; background: #f9fafb; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 2rem;
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .tool-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portal-grid,
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}

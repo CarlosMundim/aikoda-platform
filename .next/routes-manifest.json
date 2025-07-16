@@ -1,0 +1,202 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
+      "destination": "/:file",
+      "internal": true,
+      "missing": [
+        {
+          "type": "header",
+          "key": "x-nextjs-data"
+        }
+      ],
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"
+    },
+    {
+      "source": "/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)",
+      "destination": "/:notfile/",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), vr=(), accelerometer=(), gyroscope=(), magnetometer=(), clipboard-read=(), clipboard-write=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+        }
+      ],
+      "regex": "^(?:/(.*))(?:/)?$"
+    }
+  ],
+  "dynamicRoutes": [
+    {
+      "page": "/api/auth/[...nextauth]",
+      "regex": "^/api/auth/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPnextauth": "nxtPnextauth"
+      },
+      "namedRegex": "^/api/auth/(?<nxtPnextauth>.+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin/analytics",
+      "regex": "^/admin/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/analytics(?:/)?$"
+    },
+    {
+      "page": "/admin/config",
+      "regex": "^/admin/config(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/config(?:/)?$"
+    },
+    {
+      "page": "/admin/users",
+      "regex": "^/admin/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users(?:/)?$"
+    },
+    {
+      "page": "/analytics",
+      "regex": "^/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/analytics(?:/)?$"
+    },
+    {
+      "page": "/candidate/analytics",
+      "regex": "^/candidate/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/candidate/analytics(?:/)?$"
+    },
+    {
+      "page": "/candidate/auth",
+      "regex": "^/candidate/auth(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/candidate/auth(?:/)?$"
+    },
+    {
+      "page": "/candidate/jobs",
+      "regex": "^/candidate/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/candidate/jobs(?:/)?$"
+    },
+    {
+      "page": "/candidate/profile",
+      "regex": "^/candidate/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/candidate/profile(?:/)?$"
+    },
+    {
+      "page": "/candidate/registration",
+      "regex": "^/candidate/registration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/candidate/registration(?:/)?$"
+    },
+    {
+      "page": "/candidate/skills",
+      "regex": "^/candidate/skills(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/candidate/skills(?:/)?$"
+    },
+    {
+      "page": "/client/auth",
+      "regex": "^/client/auth(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/auth(?:/)?$"
+    },
+    {
+      "page": "/client/jobs",
+      "regex": "^/client/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/jobs(?:/)?$"
+    },
+    {
+      "page": "/client/pipeline",
+      "regex": "^/client/pipeline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/pipeline(?:/)?$"
+    },
+    {
+      "page": "/client/profile",
+      "regex": "^/client/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/profile(?:/)?$"
+    },
+    {
+      "page": "/dashboard/market-intelligence",
+      "regex": "^/dashboard/market\\-intelligence(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/market\\-intelligence(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}
