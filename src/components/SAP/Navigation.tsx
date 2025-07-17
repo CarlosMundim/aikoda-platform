@@ -13,20 +13,20 @@ export function Navigation({ language }: NavigationProps) {
 
   const navItems = {
     en: [
-      { href: '/', label: 'Enterprise Cockpit', icon: '📊' },
-      { href: '/candidate-analyzer', label: 'Candidate Analyzer', icon: '🎯' },
-      { href: '/market-intelligence', label: 'Market Intelligence', icon: '🌏' },
-      { href: '/cultural-reports', label: 'Cultural Reports', icon: '📈' },
-      { href: '/talent-pipeline', label: 'Talent Pipeline', icon: '🚀' },
-      { href: '/job-matching', label: 'Job Matching', icon: '🤝' },
+      { href: '/', label: 'Enterprise Cockpit' },
+      { href: '/candidate-analyzer', label: 'Candidate Analyzer' },
+      { href: '/market-intelligence', label: 'Market Intelligence' },
+      { href: '/cultural-reports', label: 'Cultural Reports' },
+      { href: '/talent-pipeline', label: 'Talent Pipeline' },
+      { href: '/job-matching', label: 'Job Matching' },
     ],
     ja: [
-      { href: '/', label: 'エンタープライズ コックピット', icon: '📊' },
-      { href: '/candidate-analyzer', label: '候補者分析', icon: '🎯' },
-      { href: '/market-intelligence', label: '市場インテリジェンス', icon: '🌏' },
-      { href: '/cultural-reports', label: '文化レポート', icon: '📈' },
-      { href: '/talent-pipeline', label: 'タレントパイプライン', icon: '🚀' },
-      { href: '/job-matching', label: 'ジョブマッチング', icon: '🤝' },
+      { href: '/', label: 'エンタープライズ コックピット' },
+      { href: '/candidate-analyzer', label: '候補者分析' },
+      { href: '/market-intelligence', label: '市場インテリジェンス' },
+      { href: '/cultural-reports', label: '文化レポート' },
+      { href: '/talent-pipeline', label: 'タレントパイプライン' },
+      { href: '/job-matching', label: 'ジョブマッチング' },
     ]
   }
 
@@ -35,21 +35,16 @@ export function Navigation({ language }: NavigationProps) {
   return (
     <nav className="bg-white border-b border-sap-border shadow-sm">
       <div className="sap-container">
-        <div className="flex space-x-1 overflow-x-auto py-2">
+        <div className="flex space-x-2 overflow-x-auto py-3">
           {items.map((item) => {
             const isActive = pathname === item.href
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors ${
-                  isActive
-                    ? 'bg-sap-brand text-white'
-                    : 'text-sap-text-secondary hover:bg-sap-hover hover:text-sap-text-primary'
-                }`}
+                className={`sap-button ${isActive ? 'primary' : 'secondary'} whitespace-nowrap`}
               >
-                <span>{item.icon}</span>
-                <span>{item.label}</span>
+                {item.label}
               </Link>
             )
           })}

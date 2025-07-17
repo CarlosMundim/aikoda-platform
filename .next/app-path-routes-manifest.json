@@ -3,8 +3,8 @@
   "/api/candidates/analyze/route": "/api/candidates/analyze",
   "/api/dashboard/enterprise-kpis/route": "/api/dashboard/enterprise-kpis",
   "/candidate-analyzer/page": "/candidate-analyzer",
-  "/job-matching/page": "/job-matching",
   "/cultural-reports/page": "/cultural-reports",
+  "/job-matching/page": "/job-matching",
   "/market-intelligence/page": "/market-intelligence",
   "/page": "/",
   "/talent-pipeline/page": "/talent-pipeline"

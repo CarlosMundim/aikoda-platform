@@ -3,8 +3,8 @@
   "/api/candidates/analyze/route": "app/api/candidates/analyze/route.js",
   "/api/dashboard/enterprise-kpis/route": "app/api/dashboard/enterprise-kpis/route.js",
   "/candidate-analyzer/page": "app/candidate-analyzer/page.js",
-  "/job-matching/page": "app/job-matching/page.js",
   "/cultural-reports/page": "app/cultural-reports/page.js",
+  "/job-matching/page": "app/job-matching/page.js",
   "/market-intelligence/page": "app/market-intelligence/page.js",
   "/page": "app/page.js",
   "/talent-pipeline/page": "app/talent-pipeline/page.js"
