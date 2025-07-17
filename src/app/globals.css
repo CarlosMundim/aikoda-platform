@@ -404,3 +404,362 @@ body {
   to { opacity: 1; transform: translateX(0); }
 }
 
+/* Mobile-First Architecture */
+:root {
+  /* Mobile-first breakpoints */
+  --mobile-first-xs: 320px;
+  --mobile-first-sm: 640px;
+  --mobile-first-md: 768px;
+  --mobile-first-lg: 1024px;
+  --mobile-first-xl: 1280px;
+  
+  /* Touch targets */
+  --touch-target-min: 44px;
+  --touch-target-preferred: 48px;
+  
+  /* Mobile spacing */
+  --mobile-padding: 1rem;
+  --mobile-margin: 0.75rem;
+  
+  /* Safe areas for mobile devices */
+  --safe-area-top: env(safe-area-inset-top);
+  --safe-area-bottom: env(safe-area-inset-bottom);
+  --safe-area-left: env(safe-area-inset-left);
+  --safe-area-right: env(safe-area-inset-right);
+}
+
+/* Base mobile-first styles */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+}
+
+/* Mobile Navigation */
+.sap-mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  background: var(--sap-card-background);
+  border-top: 1px solid var(--sap-border-color);
+  padding-bottom: var(--safe-area-bottom);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sap-mobile-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
+  min-height: var(--touch-target-min);
+  text-decoration: none;
+  color: var(--sap-text-secondary);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.sap-mobile-nav-item:hover {
+  background: var(--sap-hover-background);
+}
+
+.sap-mobile-nav-item.active {
+  color: var(--sap-brand-color);
+  background: var(--sap-active-background);
+}
+
+.sap-mobile-nav-item.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 2px;
+  background: var(--sap-brand-color);
+  border-radius: 1px;
+}
+
+.sap-mobile-nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.25rem;
+}
+
+.sap-mobile-nav-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Safe Area Support */
+.sap-safe-area-top {
+  padding-top: var(--safe-area-top);
+}
+
+.sap-safe-area-bottom {
+  padding-bottom: var(--safe-area-bottom);
+}
+
+.sap-safe-area-left {
+  padding-left: var(--safe-area-left);
+}
+
+.sap-safe-area-right {
+  padding-right: var(--safe-area-right);
+}
+
+/* Touch-Optimized Components */
+.sap-touch-target {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sap-touch-target:active {
+  transform: scale(0.96);
+}
+
+/* Mobile-First Responsive Grid */
+.sap-mobile-grid {
+  display: grid;
+  gap: var(--mobile-margin);
+  padding: var(--mobile-padding);
+}
+
+@media (min-width: 640px) {
+  .sap-mobile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .sap-mobile-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sap-mobile-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Mobile Card Stack */
+.sap-mobile-card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-margin);
+  padding: var(--mobile-padding);
+}
+
+@media (min-width: 768px) {
+  .sap-mobile-card-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sap-mobile-card-stack {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile Typography Scaling */
+.sap-mobile-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .sap-mobile-text {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sap-mobile-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile Button Enhancements */
+.sap-button {
+  min-height: var(--touch-target-min);
+  touch-action: manipulation;
+}
+
+.sap-button:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Form Enhancements */
+.sap-input, .sap-select {
+  min-height: var(--touch-target-min);
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+/* Mobile Drawer Animation */
+.sap-mobile-drawer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--sap-card-background);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1001;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.sap-mobile-drawer.open {
+  transform: translateY(0);
+}
+
+/* Mobile Action Sheet */
+.sap-mobile-action-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--sap-card-background);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1002;
+  padding-bottom: var(--safe-area-bottom);
+}
+
+.sap-mobile-action-sheet.open {
+  transform: translateY(0);
+}
+
+/* Gesture Support */
+.sap-swipeable {
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.sap-swipeable:active {
+  cursor: grabbing;
+}
+
+/* Mobile Loading States */
+.sap-mobile-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sap-mobile-loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--sap-border-color);
+  border-top: 3px solid var(--sap-brand-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Mobile Pull-to-Refresh */
+.sap-pull-to-refresh {
+  position: relative;
+  overflow: hidden;
+}
+
+.sap-pull-indicator {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sap-card-background);
+  box-shadow: var(--sap-shadow-md);
+  transition: all 0.3s ease;
+}
+
+.sap-pull-indicator.active {
+  top: 20px;
+}
+
+/* Mobile Viewport Adjustments */
+@media (max-width: 767px) {
+  .sap-container {
+    padding: 0 1rem;
+  }
+  
+  .sap-section {
+    padding: 2rem 0;
+  }
+  
+  .sap-card {
+    margin: 0.5rem 0;
+  }
+  
+  .sap-card-content {
+    padding: 1rem;
+  }
+  
+  /* Adjust typography for mobile */
+  .sap-title {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  .sap-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .sap-heading {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+}
+
+/* Hide mobile nav on desktop */
+@media (min-width: 1024px) {
+  .sap-mobile-nav {
+    display: none;
+  }
+}
+
+/* PWA-specific styles */
+@media (display-mode: standalone) {
+  body {
+    padding-top: var(--safe-area-top);
+  }
+  
+  .sap-mobile-nav {
+    padding-bottom: calc(var(--safe-area-bottom) + 0.5rem);
+  }
+}
+
