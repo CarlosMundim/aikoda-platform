@@ -20,8 +20,13 @@ export default withAuth(
       }
     }
 
-    // Client/HR Manager routes
+    // Client/HR Manager routes - but allow public access to market-intelligence
     if (pathname.startsWith('/dashboard') || pathname.startsWith('/reports')) {
+      // Allow public access to market-intelligence dashboard
+      if (pathname === '/dashboard/market-intelligence') {
+        return NextResponse.next()
+      }
+      
       if (!token?.role || !['ADMIN', 'CLIENT', 'HR_MANAGER'].includes(token.role as string)) {
         return NextResponse.redirect(new URL('/auth/signin', request.url))
       }
@@ -87,7 +92,7 @@ export default withAuth(
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|public).*)',
+    '/((?!_next/static|_next/image|favicon.ico|public|dashboard/market-intelligence).*)',
     '/api/((?!auth).*)'
   ]
 }
