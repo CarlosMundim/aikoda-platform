@@ -90,9 +90,7 @@ export default withAuth(
   }
 )
 
+// Temporarily disable middleware to fix site access issues
 export const config = {
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|public|dashboard/market-intelligence).*)',
-    '/api/((?!auth).*)'
-  ]
+  matcher: []
 }
