@@ -17,7 +17,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         <div className="sap-container">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4">
-              <h1 className="text-2xl font-bold text-sap-brand">aiKODA</h1>
+              <h1 className="text-2xl font-bold text-sap-brand">iWORKZ Technologies kk</h1>
               <span className="text-sap-text-secondary">Cultural Intelligence Platform</span>
             </div>
             <LanguageToggle onLanguageChange={setCurrentLanguage} />
@@ -34,7 +34,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <footer className="bg-white border-t border-sap-border mt-12">
         <div className="sap-container py-6">
           <div className="text-center text-sap-text-muted">
-            <p>© 2025 aiKODA Cultural Intelligence Platform. All rights reserved.</p>
+            <p>© 2025 iWORKZ Technologies kk. All rights reserved.</p>
             <p className="mt-1">Enterprise Edition - 47-Dimension Cultural Intelligence Framework</p>
           </div>
         </div>

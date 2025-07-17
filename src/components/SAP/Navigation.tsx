@@ -19,6 +19,9 @@ export function Navigation({ language }: NavigationProps) {
       { href: '/cultural-reports', label: 'Cultural Reports' },
       { href: '/talent-pipeline', label: 'Talent Pipeline' },
       { href: '/job-matching', label: 'Job Matching' },
+      { href: '/client-registration', label: 'Client Registration' },
+      { href: '/candidate-registration', label: 'Candidate Registration' },
+      { href: '/job-posting', label: 'Job Posting' },
     ],
     ja: [
       { href: '/', label: 'エンタープライズ コックピット' },
@@ -27,6 +30,9 @@ export function Navigation({ language }: NavigationProps) {
       { href: '/cultural-reports', label: '文化レポート' },
       { href: '/talent-pipeline', label: 'タレントパイプライン' },
       { href: '/job-matching', label: 'ジョブマッチング' },
+      { href: '/client-registration', label: 'クライアント登録' },
+      { href: '/candidate-registration', label: '候補者登録' },
+      { href: '/job-posting', label: '求人投稿' },
     ]
   }
 
