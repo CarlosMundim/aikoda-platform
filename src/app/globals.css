@@ -1,411 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --font-family-english: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-family-japanese: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Sans', sans-serif;
-  --font-family-primary: var(--font-family-english);
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
   
-  /* SAP Fiori Colors */
-  --sap-brand-color: #0070F2;
-  --sap-success-color: #30914C;
-  --sap-warning-color: #E76500;
-  --sap-error-color: #BB0000;
-  --sap-background: #FAFAFA;
-  --sap-card-background: #FFFFFF;
-  --sap-border-color: #D5DAE0;
-  --sap-text-primary: #32363A;
-  --sap-text-secondary: #6A6D70;
-  --sap-text-muted: #8C8C8C;
-  --sap-hover-background: #F5F5F5;
-  --sap-active-background: #E6F3FF;
+  /* iWORKZ Brand Colors - Manus's System */
+  --iworkz-indigo: #1e3a8a; /* Deep Indigo - Trust */
+  --iworkz-sakura: #fecaca; /* Sakura Pink - Harmony */
+  --iworkz-ochre: #fbbf24; /* Light Ochre - Warmth */
+  --iworkz-neutral: #6b7280; /* Neutral Grey */
+  --iworkz-soft-white: #fefefe; /* Soft White */
   
-  /* SAP Fiori Spacing */
-  --sap-spacing-xs: 0.25rem;
-  --sap-spacing-sm: 0.5rem;
-  --sap-spacing-md: 1rem;
-  --sap-spacing-lg: 1.5rem;
-  --sap-spacing-xl: 2rem;
-  --sap-spacing-xxl: 3rem;
-  
-  /* SAP Fiori Typography */
-  --sap-font-size-xs: 0.75rem;
-  --sap-font-size-sm: 0.875rem;
-  --sap-font-size-base: 1rem;
-  --sap-font-size-lg: 1.125rem;
-  --sap-font-size-xl: 1.25rem;
-  --sap-font-size-2xl: 1.5rem;
-  --sap-font-size-3xl: 2rem;
-  
-  /* SAP Fiori Shadows */
-  --sap-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --sap-shadow-md: 0 1px 4px rgba(0, 0, 0, 0.1);
-  --sap-shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.12);
-  
-  /* SAP Fiori Border Radius */
-  --sap-border-radius: 4px;
-  --sap-border-radius-lg: 8px;
-}
-
-[lang="ja"] {
-  --font-family-primary: var(--font-family-japanese);
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: var(--font-family-primary);
-  background-color: var(--sap-background);
-  color: var(--sap-text-primary);
-  line-height: 1.5;
-}
-
-/* SAP Fiori Base Components */
-.sap-card {
-  background: var(--sap-card-background);
-  border: 1px solid var(--sap-border-color);
-  border-radius: var(--sap-border-radius);
-  box-shadow: var(--sap-shadow-md);
-  overflow: hidden;
-  transition: all 0.2s ease;
-}
-
-.sap-card:hover {
-  box-shadow: var(--sap-shadow-lg);
-}
-
-.sap-card-header {
-  padding: var(--sap-spacing-md) var(--sap-spacing-lg);
-  border-bottom: 1px solid var(--sap-border-color);
-  background: #FAFAFA;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sap-card-title {
-  margin: 0;
-  font-size: var(--sap-font-size-base);
-  font-weight: 600;
-  color: var(--sap-text-primary);
-}
-
-.sap-card-content {
-  padding: var(--sap-spacing-lg);
-}
-
-/* SAP Fiori Buttons */
-.sap-button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: var(--sap-border-radius);
-  font-size: var(--sap-font-size-sm);
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--sap-spacing-sm);
-  text-decoration: none;
-  font-family: var(--font-family-primary);
-}
-
-.sap-button:focus {
-  outline: 2px solid var(--sap-brand-color);
-  outline-offset: 2px;
-}
-
-.sap-button.primary {
-  background: var(--sap-brand-color);
-  color: white;
-}
-
-.sap-button.primary:hover:not(:disabled) {
-  background: #005CBB;
-}
-
-.sap-button.secondary {
-  background: var(--sap-card-background);
-  color: var(--sap-brand-color);
-  border: 1px solid var(--sap-brand-color);
-}
-
-.sap-button.secondary:hover:not(:disabled) {
-  background: var(--sap-active-background);
-}
-
-.sap-button.ghost {
-  background: transparent;
-  color: var(--sap-text-primary);
-  border: 1px solid var(--sap-border-color);
-}
-
-.sap-button.ghost:hover:not(:disabled) {
-  background: var(--sap-hover-background);
-}
-
-.sap-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* SAP Fiori Form Elements */
-.sap-input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--sap-border-color);
-  border-radius: var(--sap-border-radius);
-  font-size: var(--sap-font-size-sm);
-  font-family: var(--font-family-primary);
-  background: var(--sap-card-background);
-  color: var(--sap-text-primary);
-  transition: all 0.2s ease;
-}
-
-.sap-input:focus {
-  outline: none;
-  border-color: var(--sap-brand-color);
-  box-shadow: 0 0 0 2px rgba(0, 112, 242, 0.1);
-}
-
-.sap-input::placeholder {
-  color: var(--sap-text-muted);
-}
-
-.sap-label {
-  display: block;
-  margin-bottom: var(--sap-spacing-xs);
-  font-size: var(--sap-font-size-sm);
-  font-weight: 500;
-  color: var(--sap-text-primary);
-}
-
-.sap-select {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--sap-border-color);
-  border-radius: var(--sap-border-radius);
-  font-size: var(--sap-font-size-sm);
-  font-family: var(--font-family-primary);
-  background: var(--sap-card-background);
-  color: var(--sap-text-primary);
-  cursor: pointer;
-}
-
-/* SAP Fiori Language Toggle */
-.sap-language-toggle {
-  display: flex;
-  border: 1px solid var(--sap-border-color);
-  border-radius: var(--sap-border-radius);
-  overflow: hidden;
-  background: var(--sap-card-background);
-}
-
-.sap-language-toggle .toggle-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  background: transparent;
-  color: var(--sap-text-secondary);
-  cursor: pointer;
-  font-size: var(--sap-font-size-sm);
-  font-weight: 500;
-  transition: all 0.2s ease;
-  font-family: var(--font-family-primary);
-}
-
-.sap-language-toggle .toggle-btn:hover {
-  background: var(--sap-hover-background);
-}
-
-.sap-language-toggle .toggle-btn.active {
-  background: var(--sap-brand-color);
-  color: white;
-}
-
-/* SAP Fiori Typography Classes */
-.sap-title {
-  font-size: var(--sap-font-size-3xl);
-  font-weight: 400;
-  color: var(--sap-text-primary);
-  margin: 0;
-  line-height: 1.2;
-}
-
-.sap-subtitle {
-  font-size: var(--sap-font-size-xl);
-  font-weight: 500;
-  color: var(--sap-text-primary);
-  margin: 0;
-  line-height: 1.3;
-}
-
-.sap-heading {
-  font-size: var(--sap-font-size-lg);
-  font-weight: 600;
-  color: var(--sap-text-primary);
-  margin: 0;
-  line-height: 1.4;
-}
-
-.sap-body {
-  font-size: var(--sap-font-size-base);
-  font-weight: 400;
-  color: var(--sap-text-primary);
-  line-height: 1.5;
-}
-
-.sap-caption {
-  font-size: var(--sap-font-size-sm);
-  font-weight: 400;
-  color: var(--sap-text-secondary);
-  line-height: 1.4;
-}
-
-/* SAP Fiori Status Colors */
-.sap-status-success {
-  color: var(--sap-success-color);
-}
-
-.sap-status-warning {
-  color: var(--sap-warning-color);
-}
-
-.sap-status-error {
-  color: var(--sap-error-color);
-}
-
-.sap-bg-success {
-  background-color: var(--sap-success-color);
-  color: white;
-}
-
-.sap-bg-warning {
-  background-color: var(--sap-warning-color);
-  color: white;
-}
-
-.sap-bg-error {
-  background-color: var(--sap-error-color);
-  color: white;
-}
-
-/* SAP Fiori Grid System */
-.sap-grid {
-  display: grid;
-  gap: var(--sap-spacing-lg);
-}
-
-.sap-grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.sap-grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.sap-grid-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-@media (max-width: 768px) {
-  .sap-grid-2,
-  .sap-grid-3,
-  .sap-grid-4 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* SAP Fiori Responsive Utilities */
-.sap-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--sap-spacing-lg);
-}
-
-.sap-section {
-  padding: var(--sap-spacing-xl) 0;
-}
-
-/* Japanese Text Adjustments */
-[lang="ja"] .sap-title {
-  font-size: calc(var(--sap-font-size-3xl) + 2px);
-}
-
-[lang="ja"] .sap-subtitle {
-  font-size: calc(var(--sap-font-size-xl) + 2px);
-}
-
-[lang="ja"] .sap-heading {
-  font-size: calc(var(--sap-font-size-lg) + 2px);
-}
-
-[lang="ja"] .sap-body {
-  font-size: calc(var(--sap-font-size-base) + 2px);
-}
-
-/* Dual Language Support */
-.dual-language {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sap-spacing-xs);
-  text-align: center;
-  padding: 0 var(--sap-spacing-xl);
-}
-
-.dual-language .japanese {
-  font-size: var(--sap-font-size-base);
-  font-weight: 500;
-}
-
-.dual-language .english {
-  font-size: calc(var(--sap-font-size-base) - 2px);
-  font-weight: 400;
-  color: var(--sap-text-secondary);
-}
-
-/* Loading States */
-.sap-loading {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--sap-border-color);
-  border-radius: 50%;
-  border-top-color: var(--sap-brand-color);
-  animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* Animations */
-.sap-fade-in {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.sap-slide-in {
-  animation: slideIn 0.3s ease-in-out;
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-/* Mobile-First Architecture */
-:root {
   /* Mobile-first breakpoints */
   --mobile-first-xs: 320px;
   --mobile-first-sm: 640px;
@@ -417,10 +56,6 @@ body {
   --touch-target-min: 44px;
   --touch-target-preferred: 48px;
   
-  /* Mobile spacing */
-  --mobile-padding: 1rem;
-  --mobile-margin: 0.75rem;
-  
   /* Safe areas for mobile devices */
   --safe-area-top: env(safe-area-inset-top);
   --safe-area-bottom: env(safe-area-inset-bottom);
@@ -428,16 +63,193 @@ body {
   --safe-area-right: env(safe-area-inset-right);
 }
 
-/* Base mobile-first styles */
-* {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  touch-action: manipulation;
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+  }
+}
+
+/* Manus's iWORKZ Typography Classes */
+.font-japanese {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.font-english {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Manus's Dual-language text sizing */
+.text-dual-hero-jp {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.text-dual-hero-en {
+  font-size: 3rem; /* 2px smaller equivalent */
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.text-dual-subtitle-jp {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.text-dual-subtitle-en {
+  font-size: 1.375rem; /* 2px smaller equivalent */
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Manus's Brand color utilities */
+.bg-iworkz-indigo {
+  background-color: var(--iworkz-indigo);
+}
+
+.bg-iworkz-sakura {
+  background-color: var(--iworkz-sakura);
+}
+
+.bg-iworkz-ochre {
+  background-color: var(--iworkz-ochre);
+}
+
+.text-iworkz-indigo {
+  color: var(--iworkz-indigo);
+}
+
+.text-iworkz-sakura {
+  color: var(--iworkz-sakura);
+}
+
+.text-iworkz-ochre {
+  color: var(--iworkz-ochre);
+}
+
+.border-iworkz-indigo {
+  border-color: var(--iworkz-indigo);
+}
+
+/* Manus's Cultural design elements */
+.harmony-gradient {
+  background: linear-gradient(135deg, var(--iworkz-indigo) 0%, var(--iworkz-sakura) 100%);
+}
+
+.cultural-bridge {
+  background: linear-gradient(90deg, var(--iworkz-indigo) 0%, var(--iworkz-ochre) 50%, var(--iworkz-sakura) 100%);
+}
+
+/* Manus's Smooth animations for cultural intelligence */
+.animate-cultural-flow {
+  animation: cultural-flow 3s ease-in-out infinite;
+}
+
+@keyframes cultural-flow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+/* Manus's Interactive hover states */
+.hover-cultural {
+  transition: all 0.3s ease;
+}
+
+.hover-cultural:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.15);
+}
+
+/* Manus's Mobile-first responsive design */
+@media (max-width: 768px) {
+  .text-dual-hero-jp {
+    font-size: 2.5rem;
+  }
+  
+  .text-dual-hero-en {
+    font-size: 2.25rem;
+  }
+  
+  .text-dual-subtitle-jp {
+    font-size: 1.25rem;
+  }
+  
+  .text-dual-subtitle-en {
+    font-size: 1.125rem;
+  }
+}
+
+/* Manus's Enterprise-grade visual hierarchy */
+.enterprise-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.enterprise-card:hover {
+  box-shadow: 0 8px 30px rgba(30, 58, 138, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Manus's Cultural intelligence visualization */
+.cq-dimension {
+  background: linear-gradient(45deg, rgba(30, 58, 138, 0.1), rgba(254, 202, 202, 0.1));
+  border-left: 4px solid var(--iworkz-indigo);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cq-dimension:hover {
+  background: linear-gradient(45deg, rgba(30, 58, 138, 0.15), rgba(254, 202, 202, 0.15));
+  transform: translateX(8px);
 }
 
 /* Mobile Navigation */
@@ -448,8 +260,9 @@ body {
   right: 0;
   z-index: 1000;
   display: flex;
-  background: var(--sap-card-background);
-  border-top: 1px solid var(--sap-border-color);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: var(--safe-area-bottom);
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -463,18 +276,18 @@ body {
   padding: 0.75rem 0.5rem;
   min-height: var(--touch-target-min);
   text-decoration: none;
-  color: var(--sap-text-secondary);
+  color: #6b7280;
   transition: all 0.2s ease;
   position: relative;
 }
 
 .sap-mobile-nav-item:hover {
-  background: var(--sap-hover-background);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .sap-mobile-nav-item.active {
-  color: var(--sap-brand-color);
-  background: var(--sap-active-background);
+  color: var(--iworkz-indigo);
+  background: rgba(30, 58, 138, 0.1);
 }
 
 .sap-mobile-nav-item.active::before {
@@ -485,7 +298,7 @@ body {
   transform: translateX(-50%);
   width: 24px;
   height: 2px;
-  background: var(--sap-brand-color);
+  background: var(--iworkz-indigo);
   border-radius: 1px;
 }
 
@@ -500,6 +313,21 @@ body {
   font-weight: 500;
   text-align: center;
   line-height: 1.2;
+}
+
+/* Touch-Optimized Components */
+.sap-touch-target {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sap-touch-target:active {
+  transform: scale(0.96);
 }
 
 /* Safe Area Support */
@@ -519,239 +347,6 @@ body {
   padding-right: var(--safe-area-right);
 }
 
-/* Touch-Optimized Components */
-.sap-touch-target {
-  min-height: var(--touch-target-min);
-  min-width: var(--touch-target-min);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.sap-touch-target:active {
-  transform: scale(0.96);
-}
-
-/* Mobile-First Responsive Grid */
-.sap-mobile-grid {
-  display: grid;
-  gap: var(--mobile-margin);
-  padding: var(--mobile-padding);
-}
-
-@media (min-width: 640px) {
-  .sap-mobile-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .sap-mobile-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .sap-mobile-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Mobile Card Stack */
-.sap-mobile-card-stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--mobile-margin);
-  padding: var(--mobile-padding);
-}
-
-@media (min-width: 768px) {
-  .sap-mobile-card-stack {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .sap-mobile-card-stack {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Mobile Typography Scaling */
-.sap-mobile-text {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-@media (min-width: 640px) {
-  .sap-mobile-text {
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sap-mobile-text {
-    font-size: 1.25rem;
-  }
-}
-
-/* Mobile Button Enhancements */
-.sap-button {
-  min-height: var(--touch-target-min);
-  touch-action: manipulation;
-}
-
-.sap-button:active {
-  transform: scale(0.98);
-}
-
-/* Mobile Form Enhancements */
-.sap-input, .sap-select {
-  min-height: var(--touch-target-min);
-  font-size: 16px; /* Prevents zoom on iOS */
-}
-
-/* Mobile Drawer Animation */
-.sap-mobile-drawer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--sap-card-background);
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
-  transform: translateY(100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1001;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.sap-mobile-drawer.open {
-  transform: translateY(0);
-}
-
-/* Mobile Action Sheet */
-.sap-mobile-action-sheet {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--sap-card-background);
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
-  transform: translateY(100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1002;
-  padding-bottom: var(--safe-area-bottom);
-}
-
-.sap-mobile-action-sheet.open {
-  transform: translateY(0);
-}
-
-/* Gesture Support */
-.sap-swipeable {
-  touch-action: pan-y;
-  user-select: none;
-}
-
-.sap-swipeable:active {
-  cursor: grabbing;
-}
-
-/* Mobile Loading States */
-.sap-mobile-loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.sap-mobile-loading-spinner {
-  width: 32px;
-  height: 32px;
-  border: 3px solid var(--sap-border-color);
-  border-top: 3px solid var(--sap-brand-color);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-/* Mobile Pull-to-Refresh */
-.sap-pull-to-refresh {
-  position: relative;
-  overflow: hidden;
-}
-
-.sap-pull-indicator {
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--sap-card-background);
-  box-shadow: var(--sap-shadow-md);
-  transition: all 0.3s ease;
-}
-
-.sap-pull-indicator.active {
-  top: 20px;
-}
-
-/* Mobile Viewport Adjustments */
-@media (max-width: 767px) {
-  .sap-container {
-    padding: 0 1rem;
-  }
-  
-  .sap-section {
-    padding: 2rem 0;
-  }
-  
-  .sap-card {
-    margin: 0.5rem 0;
-  }
-  
-  .sap-card-content {
-    padding: 1rem;
-  }
-  
-  /* Adjust typography for mobile */
-  .sap-title {
-    font-size: 2rem;
-    line-height: 1.1;
-  }
-  
-  .sap-subtitle {
-    font-size: 1.5rem;
-    line-height: 1.2;
-  }
-  
-  .sap-heading {
-    font-size: 1.25rem;
-    line-height: 1.3;
-  }
-}
-
-/* Hide mobile nav on desktop */
-@media (min-width: 1024px) {
-  .sap-mobile-nav {
-    display: none;
-  }
-}
-
 /* PWA-specific styles */
 @media (display-mode: standalone) {
   body {
@@ -763,3 +358,9 @@ body {
   }
 }
 
+/* Hide mobile nav on desktop */
+@media (min-width: 1024px) {
+  .sap-mobile-nav {
+    display: none;
+  }
+}
