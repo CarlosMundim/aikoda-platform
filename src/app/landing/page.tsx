@@ -697,7 +697,7 @@ export default function LandingPage() {
       </footer>
 
       {/* Mobile Navigation */}
-      <MobileNavigation language={language as 'dual' | 'ja' | 'en'} />
+      <MobileNavigation language={language === 'dual' ? 'ja' : language === 'japanese' ? 'ja' : 'en'} />
     </div>
   )
 }

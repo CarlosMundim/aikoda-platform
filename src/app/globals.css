@@ -99,7 +99,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-gray-200;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
   }
@@ -112,144 +112,148 @@
   }
 }
 
-/* Manus's iWORKZ Typography Classes */
-.font-japanese {
-  font-family: 'Noto Sans JP', sans-serif;
-}
+@layer components {
+  /* Manus's iWORKZ Typography Classes */
+  .font-japanese {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
 
-.font-english {
-  font-family: 'Inter', sans-serif;
-}
+  .font-english {
+    font-family: 'Inter', sans-serif;
+  }
 
-/* Manus's Dual-language text sizing */
-.text-dual-hero-jp {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-.text-dual-hero-en {
-  font-size: 3rem; /* 2px smaller equivalent */
-  line-height: 1.1;
-  font-weight: 600;
-}
-
-.text-dual-subtitle-jp {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  font-weight: 500;
-}
-
-.text-dual-subtitle-en {
-  font-size: 1.375rem; /* 2px smaller equivalent */
-  line-height: 1.4;
-  font-weight: 400;
-}
-
-/* Manus's Brand color utilities */
-.bg-iworkz-indigo {
-  background-color: var(--iworkz-indigo);
-}
-
-.bg-iworkz-sakura {
-  background-color: var(--iworkz-sakura);
-}
-
-.bg-iworkz-ochre {
-  background-color: var(--iworkz-ochre);
-}
-
-.text-iworkz-indigo {
-  color: var(--iworkz-indigo);
-}
-
-.text-iworkz-sakura {
-  color: var(--iworkz-sakura);
-}
-
-.text-iworkz-ochre {
-  color: var(--iworkz-ochre);
-}
-
-.border-iworkz-indigo {
-  border-color: var(--iworkz-indigo);
-}
-
-/* Manus's Cultural design elements */
-.harmony-gradient {
-  background: linear-gradient(135deg, var(--iworkz-indigo) 0%, var(--iworkz-sakura) 100%);
-}
-
-.cultural-bridge {
-  background: linear-gradient(90deg, var(--iworkz-indigo) 0%, var(--iworkz-ochre) 50%, var(--iworkz-sakura) 100%);
-}
-
-/* Manus's Smooth animations for cultural intelligence */
-.animate-cultural-flow {
-  animation: cultural-flow 3s ease-in-out infinite;
-}
-
-@keyframes cultural-flow {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-10px) scale(1.02); }
-}
-
-/* Manus's Interactive hover states */
-.hover-cultural {
-  transition: all 0.3s ease;
-}
-
-.hover-cultural:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.15);
-}
-
-/* Manus's Mobile-first responsive design */
-@media (max-width: 768px) {
+  /* Manus's Dual-language text sizing */
   .text-dual-hero-jp {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
   }
-  
+
   .text-dual-hero-en {
-    font-size: 2.25rem;
+    font-size: 3rem; /* 2px smaller equivalent */
+    line-height: 1.1;
+    font-weight: 600;
   }
-  
+
   .text-dual-subtitle-jp {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 500;
   }
-  
+
   .text-dual-subtitle-en {
-    font-size: 1.125rem;
+    font-size: 1.375rem; /* 2px smaller equivalent */
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  /* Manus's Brand color utilities */
+  .bg-iworkz-indigo {
+    background-color: #1e3a8a;
+  }
+
+  .bg-iworkz-sakura {
+    background-color: #fecaca;
+  }
+
+  .bg-iworkz-ochre {
+    background-color: #fbbf24;
+  }
+
+  .text-iworkz-indigo {
+    color: #1e3a8a;
+  }
+
+  .text-iworkz-sakura {
+    color: #fecaca;
+  }
+
+  .text-iworkz-ochre {
+    color: #fbbf24;
+  }
+
+  .border-iworkz-indigo {
+    border-color: #1e3a8a;
+  }
+
+  /* Manus's Cultural design elements */
+  .harmony-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #fecaca 100%);
+  }
+
+  .cultural-bridge {
+    background: linear-gradient(90deg, #1e3a8a 0%, #fbbf24 50%, #fecaca 100%);
+  }
+
+  /* Manus's Interactive hover states */
+  .hover-cultural {
+    transition: all 0.3s ease;
+  }
+
+  .hover-cultural:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.15);
+  }
+
+  /* Manus's Enterprise-grade visual hierarchy */
+  .enterprise-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .enterprise-card:hover {
+    box-shadow: 0 8px 30px rgba(30, 58, 138, 0.15);
+    transform: translateY(-2px);
+  }
+
+  /* Manus's Cultural intelligence visualization */
+  .cq-dimension {
+    background: linear-gradient(45deg, rgba(30, 58, 138, 0.1), rgba(254, 202, 202, 0.1));
+    border-left: 4px solid #1e3a8a;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .cq-dimension:hover {
+    background: linear-gradient(45deg, rgba(30, 58, 138, 0.15), rgba(254, 202, 202, 0.15));
+    transform: translateX(8px);
   }
 }
 
-/* Manus's Enterprise-grade visual hierarchy */
-.enterprise-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(30, 58, 138, 0.1);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
+@layer utilities {
+  /* Manus's Smooth animations for cultural intelligence */
+  .animate-cultural-flow {
+    animation: cultural-flow 3s ease-in-out infinite;
+  }
 
-.enterprise-card:hover {
-  box-shadow: 0 8px 30px rgba(30, 58, 138, 0.15);
-  transform: translateY(-2px);
-}
+  @keyframes cultural-flow {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.02); }
+  }
 
-/* Manus's Cultural intelligence visualization */
-.cq-dimension {
-  background: linear-gradient(45deg, rgba(30, 58, 138, 0.1), rgba(254, 202, 202, 0.1));
-  border-left: 4px solid var(--iworkz-indigo);
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.cq-dimension:hover {
-  background: linear-gradient(45deg, rgba(30, 58, 138, 0.15), rgba(254, 202, 202, 0.15));
-  transform: translateX(8px);
+  /* Manus's Mobile-first responsive design */
+  @media (max-width: 768px) {
+    .text-dual-hero-jp {
+      font-size: 2.5rem !important;
+    }
+    
+    .text-dual-hero-en {
+      font-size: 2.25rem !important;
+    }
+    
+    .text-dual-subtitle-jp {
+      font-size: 1.25rem !important;
+    }
+    
+    .text-dual-subtitle-en {
+      font-size: 1.125rem !important;
+    }
+  }
 }
 
 /* Mobile Navigation */
