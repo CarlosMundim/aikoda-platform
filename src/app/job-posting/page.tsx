@@ -1,8 +1,7 @@
 'use client'
 
 import React from 'react'
-import { DashboardLayout } from '@/components/SAP'
-import JobPosting from '@/components/SAP/JobPosting'
+import { DashboardLayout, JobPosting } from '../../components/SAP'
 
 export default function JobPostingPage() {
   return (

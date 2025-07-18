@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { MobileHeader, MobileNavigation } from '@/components/Mobile/MobileNavigation'
+import { MobileHeader, MobileNavigation } from '../../components/Mobile/MobileNavigation'
 
 export default function LandingPage() {
   const [language, setLanguage] = useState<'en' | 'ja'>('ja')

@@ -3,9 +3,14 @@
   "/api/candidates/analyze/route": "/api/candidates/analyze",
   "/api/dashboard/enterprise-kpis/route": "/api/dashboard/enterprise-kpis",
   "/candidate-analyzer/page": "/candidate-analyzer",
+  "/candidate-registration/page": "/candidate-registration",
+  "/client-registration/page": "/client-registration",
   "/cultural-reports/page": "/cultural-reports",
   "/job-matching/page": "/job-matching",
+  "/job-posting/page": "/job-posting",
+  "/landing/page": "/landing",
   "/market-intelligence/page": "/market-intelligence",
+  "/offline/page": "/offline",
   "/page": "/",
   "/talent-pipeline/page": "/talent-pipeline"
 }

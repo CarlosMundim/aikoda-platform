@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { SAPCard, SAPButton, SAPInput, SAPSelect } from '@/components/SAP'
+import { SAPCard, SAPButton, SAPInput, SAPSelect } from './index'
 
 interface PersonalInfo {
   firstName: string

@@ -34,6 +34,18 @@
       "namedRegex": "^/candidate\\-analyzer(?:/)?$"
     },
     {
+      "page": "/candidate-registration",
+      "regex": "^/candidate\\-registration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/candidate\\-registration(?:/)?$"
+    },
+    {
+      "page": "/client-registration",
+      "regex": "^/client\\-registration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client\\-registration(?:/)?$"
+    },
+    {
       "page": "/cultural-reports",
       "regex": "^/cultural\\-reports(?:/)?$",
       "routeKeys": {},
@@ -46,10 +58,28 @@
       "namedRegex": "^/job\\-matching(?:/)?$"
     },
     {
+      "page": "/job-posting",
+      "regex": "^/job\\-posting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/job\\-posting(?:/)?$"
+    },
+    {
+      "page": "/landing",
+      "regex": "^/landing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/landing(?:/)?$"
+    },
+    {
       "page": "/market-intelligence",
       "regex": "^/market\\-intelligence(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/market\\-intelligence(?:/)?$"
+    },
+    {
+      "page": "/offline",
+      "regex": "^/offline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/offline(?:/)?$"
     },
     {
       "page": "/talent-pipeline",

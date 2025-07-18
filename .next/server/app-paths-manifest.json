@@ -1,1 +1,16 @@
-{}
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/candidates/analyze/route": "app/api/candidates/analyze/route.js",
+  "/api/dashboard/enterprise-kpis/route": "app/api/dashboard/enterprise-kpis/route.js",
+  "/candidate-analyzer/page": "app/candidate-analyzer/page.js",
+  "/candidate-registration/page": "app/candidate-registration/page.js",
+  "/client-registration/page": "app/client-registration/page.js",
+  "/cultural-reports/page": "app/cultural-reports/page.js",
+  "/job-matching/page": "app/job-matching/page.js",
+  "/job-posting/page": "app/job-posting/page.js",
+  "/landing/page": "app/landing/page.js",
+  "/market-intelligence/page": "app/market-intelligence/page.js",
+  "/offline/page": "app/offline/page.js",
+  "/page": "app/page.js",
+  "/talent-pipeline/page": "app/talent-pipeline/page.js"
+}

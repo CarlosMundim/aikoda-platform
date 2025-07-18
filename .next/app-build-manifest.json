@@ -1,3 +1,128 @@
 {
-  "pages": {}
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/app/_not-found/page-db1d27b343e6d119.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/css/435ecb812d9184b8.css",
+      "static/chunks/app/layout-83920a489e000adf.js"
+    ],
+    "/api/candidates/analyze/route": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/app/api/candidates/analyze/route-b8e604b3556f3d66.js"
+    ],
+    "/api/dashboard/enterprise-kpis/route": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/app/api/dashboard/enterprise-kpis/route-d412a8147813185a.js"
+    ],
+    "/candidate-analyzer/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/app/candidate-analyzer/page-02baf206a8416f73.js"
+    ],
+    "/candidate-registration/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/796-7a1a4ece5f7f16b1.js",
+      "static/chunks/297-428f8478ff93ea0a.js",
+      "static/chunks/app/candidate-registration/page-c977e79612d337b3.js"
+    ],
+    "/client-registration/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/796-7a1a4ece5f7f16b1.js",
+      "static/chunks/297-428f8478ff93ea0a.js",
+      "static/chunks/app/client-registration/page-b41f4ebde355cede.js"
+    ],
+    "/cultural-reports/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/796-7a1a4ece5f7f16b1.js",
+      "static/chunks/app/cultural-reports/page-43a2b4c6a31dcec0.js"
+    ],
+    "/job-matching/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/app/job-matching/page-3532b6397a8e28c6.js"
+    ],
+    "/job-posting/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/796-7a1a4ece5f7f16b1.js",
+      "static/chunks/297-428f8478ff93ea0a.js",
+      "static/chunks/app/job-posting/page-dd09567c25dd5133.js"
+    ],
+    "/landing/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/app/landing/page-23b3e6db556756eb.js"
+    ],
+    "/market-intelligence/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/app/market-intelligence/page-23a350ca430b3d92.js"
+    ],
+    "/offline/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/app/offline/page-ef50923cc4cd7c44.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/app/page-edca453298d2f414.js"
+    ],
+    "/talent-pipeline/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-1897831b3bbea01c.js",
+      "static/chunks/684-3e8c4ce993bed160.js",
+      "static/chunks/main-app-4608aa1152290abe.js",
+      "static/chunks/874-a94ba8f009f65bf6.js",
+      "static/chunks/app/talent-pipeline/page-d0c3ea70ebf46d3e.js"
+    ]
+  }
 }
